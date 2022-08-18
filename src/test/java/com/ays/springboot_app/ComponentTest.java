@@ -16,20 +16,18 @@ import com.ays.springboot_app.dao.User;
 @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
 public class ComponentTest {
 
-	 @LocalServerPort
-	 int randomServerPort;
-	 
-	 @Test
-	 public void runTest() throws URISyntaxException {
-		 RestTemplate restTemplate = new RestTemplate();
-	     
-		    final String baseUrl = "http://localhost:"+randomServerPort+"/api/v1/jackapp/login";
-		    URI uri = new URI(baseUrl);
-		     
-		    User user = new User();
-		    user.setUsername("jack");
-		    user.setPassword("Jack$123");
-		    ResponseEntity<String> result = restTemplate.postForEntity(uri, user, String.class);
-		    System.out.println(result);
-	 }
+	@LocalServerPort
+	int randomServerPort;
+
+	@Test
+	public void runTest() throws URISyntaxException {
+		RestTemplate restTemplate = new RestTemplate();	     
+		final String baseUrl = "http://localhost:"+randomServerPort+"/api/v1/jackapp/login";
+		URI uri = new URI(baseUrl);
+		User user = new User();
+		user.setUsername("jack");
+		user.setPassword("Jack$123");
+		ResponseEntity<String> result = restTemplate.postForEntity(uri, user, String.class);
+		System.out.println(result);
+	}
 }
