@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Login app
+    
+server:
+  servlet:
+    context-path: /api/v1/jackapp/
+
