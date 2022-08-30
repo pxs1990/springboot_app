@@ -4,22 +4,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_NULL)
-public class UserDetails {
+public class EmployeeDetails {
 
-	private String username;
+	
 	private String name;
 	private String age;
 	private String gender;
 	private String email;
 	private String address;
-	private String message;
-	
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
 	public String getName() {
 		return name;
 	}
@@ -50,16 +42,6 @@ public class UserDetails {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getMessage() {
-		return message;
-	}
-	public void setMessage(String message) {
-		this.message = message;
-	}
 	
-	@Override
-	public String toString() {
-		return "UserDetails [username=" + username + ", name=" + name + ", age=" + age + ", gender=" + gender
-				+ ", email=" + email + ", address=" + address + ", message=" + message + "]";
+	
 	}
-}

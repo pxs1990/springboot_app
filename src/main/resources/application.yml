@@ -1,8 +1,18 @@
 spring:
   application:
     name: Login app
-    
+  jpa:
+    hibernate:
+      #ddl-auto: create , it drops the table if it exists and creates the new one every time
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/employeeDB
+    username: root
+    password: '@Budichuppa2u'
+
 server:
   servlet:
-    context-path: /api/v1/jackapp/
+    context-path: /api/v1/pushpa/
+  port: 8081
 
